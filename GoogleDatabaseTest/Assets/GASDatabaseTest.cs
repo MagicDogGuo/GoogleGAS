@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using LitJson;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -8,6 +10,9 @@ public class GASDatabaseTest : MonoBehaviour {
     List<string> DataTxt = new List<string>();
     int row =-1;
     int col =-1;
+
+    List<ArrayDataRow> m_database = new List<ArrayDataRow>();
+
 
     private void Start()
     {
@@ -30,11 +35,35 @@ public class GASDatabaseTest : MonoBehaviour {
         {
             GUI.TextField(new Rect(20 + 100 * ((i / 10) ), 50 * ((i % 10) + 1), 100, 30), DataTxt[i]);
         }
+
+        if (GUI.Button(new Rect(900, 500, 100, 30), "存"))
+        {
+            if (DataTxt.Count == 0)
+            {
+                Debug.Log("無資料");
+            }
+            else
+            {
+                for (int i = 0; i < DataTxt.Count; i++)
+                {
+                    JsonData m_jsondata = JsonMapper.ToObject(DataTxt[i]);
+                  
+                    JsonWriter jsonWriter = new JsonWriter();
+                    jsonWriter.PrettyPrint = true;
+                    jsonWriter.IndentValue = 5;
+                    //把JsonData轉成JsonWriter
+                    JsonMapper.ToJson(m_jsondata, jsonWriter);
+
+                    File.WriteAllText(Application.dataPath + "/Resources/" + "dataName .json", jsonWriter.ToString());
+                }
+            }
+
+        }
     }
 
     void LoadData()
     {
-        StartCoroutine(Upload("readGroupToJson","hi","name","male",1,1));    
+        StartCoroutine(Upload("readGroupToJson","ID","name","male",1,1));    
     }
 
     IEnumerator Upload(string mathod,int row1 = 0,int row2 = 0)
@@ -76,7 +105,6 @@ public class GASDatabaseTest : MonoBehaviour {
                 DataTxt.Add(www.downloadHandler.text);
             }
         }
-
     }
 
 
@@ -103,8 +131,19 @@ public class GASDatabaseTest : MonoBehaviour {
                 print(www.downloadHandler.text);
                 DataTxt.Add(www.downloadHandler.text);
             }
-        }
+        }       
+    }
+}
 
-       
+public class ArrayDataRow {
+    public string ID;
+    public string Name;
+    public string Male;
+
+    public ArrayDataRow(string id,string name,string male)
+    {
+        this.ID = id;
+        this.Name = name;
+        this.Male = male;
     }
 }
