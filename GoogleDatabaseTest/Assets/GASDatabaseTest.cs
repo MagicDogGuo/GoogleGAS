@@ -6,8 +6,8 @@ using UnityEngine.Networking;
 public class GASDatabaseTest : MonoBehaviour {
 
     List<string> DataTxt = new List<string>();
-    int row=-1;
-    int col=-1;
+    int row =-1;
+    int col =-1;
 
     private void Start()
     {
@@ -34,15 +34,7 @@ public class GASDatabaseTest : MonoBehaviour {
 
     void LoadData()
     {
-        StartCoroutine(Upload("getGridNum"));
-
-        for (int i = 1; i < row + 1; i++)
-        {
-            for (int x = 1; x < col + 1; x++)
-            {
-                StartCoroutine(Upload("read", i, x));
-            }
-        }
+        StartCoroutine(Upload("readGroupToJson","hi","name","male",1,1));    
     }
 
     IEnumerator Upload(string mathod,int row1 = 0,int row2 = 0)
@@ -58,17 +50,25 @@ public class GASDatabaseTest : MonoBehaviour {
         using (UnityWebRequest www = UnityWebRequest.Post("https://script.google.com/macros/s/AKfycbzbS8P8GhLYp01s1qmerB-y9HzXX1_Skh2lJqTyAyImD9Dy9x2F/exec", form))
         {
             yield return www.SendWebRequest();
-        
+
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
             }
-            else if ( mathod == "getGridNum")
+            else if (mathod == "getGridNum")
             {
                 string[] sA;
                 sA = www.downloadHandler.text.Split(',');
                 row = int.Parse(sA[1]);
                 col = int.Parse(sA[3]);
+
+                for (int i = 1; i < row + 1; i++)
+                {
+                    for (int x = 1; x < col + 1; x++)
+                    {
+                        StartCoroutine(Upload("read", i, x));
+                    }
+                }
             }
             else
             {
@@ -76,20 +76,19 @@ public class GASDatabaseTest : MonoBehaviour {
                 DataTxt.Add(www.downloadHandler.text);
             }
         }
-        
+
     }
 
 
-    IEnumerator UploadGroup(int row1, int row2)
+    IEnumerator Upload(string mathod, string field01, string field02, string field03, int row1 = 0, int row2 = 0 )
     {
         WWWForm form = new WWWForm();
-        form.AddField("method", "read");
-        form.AddField("name", "Tom");
-        form.AddField("hp", "33");
-        form.AddField("level", "353");
-        form.AddField("row", row1);
+        form.AddField("method", mathod);
+        form.AddField("field01", field01);
+        form.AddField("field02", field02);
+        form.AddField("field03", field03);
+        form.AddField("row1", row1);
         form.AddField("row2", row2);
-
 
         using (UnityWebRequest www = UnityWebRequest.Post("https://script.google.com/macros/s/AKfycbzbS8P8GhLYp01s1qmerB-y9HzXX1_Skh2lJqTyAyImD9Dy9x2F/exec", form))
         {
@@ -99,12 +98,13 @@ public class GASDatabaseTest : MonoBehaviour {
             {
                 Debug.Log(www.error);
             }
-            else
+            else if (mathod == "readGroupToJson")
             {
                 print(www.downloadHandler.text);
                 DataTxt.Add(www.downloadHandler.text);
             }
         }
 
+       
     }
 }
