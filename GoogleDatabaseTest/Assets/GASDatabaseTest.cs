@@ -22,21 +22,18 @@ public class GASDatabaseTest : MonoBehaviour {
 
     private void OnGUI()
     {
+        for (int i = 0; i < DataTxt.Count; i++)
+        {
+            GUI.TextField(new Rect(20 + 100 * ((i / 10)), 50 * ((i % 10) + 1), 100, 30), DataTxt[i]);
+        }
+
+
         if (GUI.Button(new Rect(900, 50 , 100, 30),"更新"))
         {
             LoadData();
         }
 
-        if (GUI.Button(new Rect(900, 300, 100, 30), "關"))
-        {
-            Application.Quit();
-        }
-        for (int i = 0; i < DataTxt.Count; i++)
-        {
-            GUI.TextField(new Rect(20 + 100 * ((i / 10) ), 50 * ((i % 10) + 1), 100, 30), DataTxt[i]);
-        }
-
-        if (GUI.Button(new Rect(900, 500, 100, 30), "存"))
+        if (GUI.Button(new Rect(900, 300, 100, 30), "存"))
         {
             if (DataTxt.Count == 0)
             {
@@ -46,24 +43,37 @@ public class GASDatabaseTest : MonoBehaviour {
             {
                 for (int i = 0; i < DataTxt.Count; i++)
                 {
-                    JsonData m_jsondata = JsonMapper.ToObject(DataTxt[i]);
-                  
-                    JsonWriter jsonWriter = new JsonWriter();
-                    jsonWriter.PrettyPrint = true;
-                    jsonWriter.IndentValue = 5;
-                    //把JsonData轉成JsonWriter
-                    JsonMapper.ToJson(m_jsondata, jsonWriter);
-
-                    File.WriteAllText(Application.dataPath + "/Resources/" + "dataName .json", jsonWriter.ToString());
+                    SaveData(DataTxt[i],"資料名字");
                 }
             }
-
         }
+
+        if (GUI.Button(new Rect(900, 500, 100, 30), "關"))
+        {
+            Application.Quit();
+        }
+
     }
 
+    void SaveData(string InputString,string FileName)
+    {
+        JsonData m_jsondata = JsonMapper.ToObject(InputString);
+
+        JsonWriter jsonWriter = new JsonWriter();
+        jsonWriter.PrettyPrint = true;
+        jsonWriter.IndentValue = 5;
+        //把JsonData轉成JsonWriter
+        JsonMapper.ToJson(m_jsondata, jsonWriter);
+
+        File.WriteAllText(Application.dataPath + "/Resources/" + FileName+ ".json", jsonWriter.ToString());
+        Debug.Log("已儲存");
+    }
+
+    string[] FieldArrray = { "Level", "IsPass", "Score" };
     void LoadData()
     {
-        StartCoroutine(Upload("readGroupToJson","ID","name","male",1,1));    
+        //A2
+        StartCoroutine(Upload("1NyDlpVforvBe9DeS9c928JYqqlYsftuhdDXGJqrX2wo", "LevelPass", "readGroupToJson_3field", 2,1, FieldArrray[0], FieldArrray[1], FieldArrray[2]));    
     }
 
     IEnumerator Upload(string mathod,int row1 = 0,int row2 = 0)
@@ -107,18 +117,24 @@ public class GASDatabaseTest : MonoBehaviour {
         }
     }
 
-
-    IEnumerator Upload(string mathod, string field01, string field02, string field03, int row1 = 0, int row2 = 0 )
+    IEnumerator Upload(string appID,string sheetName, string mathod, int row, int col,params string[] fields)
     {
         WWWForm form = new WWWForm();
-        form.AddField("method", mathod);
-        form.AddField("field01", field01);
-        form.AddField("field02", field02);
-        form.AddField("field03", field03);
-        form.AddField("row1", row1);
-        form.AddField("row2", row2);
+        form.AddField("appID", appID);
+        form.AddField("sheetName", sheetName);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://script.google.com/macros/s/AKfycbzbS8P8GhLYp01s1qmerB-y9HzXX1_Skh2lJqTyAyImD9Dy9x2F/exec", form))
+        form.AddField("method", mathod);
+
+        form.AddField("row", row);
+        form.AddField("col", col);
+
+        for (int i = 0; i < fields.Length; i++)
+        {
+            form.AddField("field0"+(i+1), fields[i]);
+
+        }
+
+        using (UnityWebRequest www = UnityWebRequest.Post("https://script.google.com/macros/s/AKfycbxEPyvVQa7s4e9c_G_YeZIjteL4T0G4lhPrkI4aOBgQs6FK2UU/exec", form))
         {
             yield return www.SendWebRequest();
 
@@ -126,7 +142,7 @@ public class GASDatabaseTest : MonoBehaviour {
             {
                 Debug.Log(www.error);
             }
-            else if (mathod == "readGroupToJson")
+            else 
             {
                 print(www.downloadHandler.text);
                 DataTxt.Add(www.downloadHandler.text);
