@@ -13,6 +13,7 @@ public class GASDatabase : MonoBehaviour {
 
 
     List<string> DataTxt = new List<string>();
+    List<string> FileNameTxt = new List<string>();
     int row =-1;
     int col =-1;
 
@@ -41,7 +42,6 @@ public class GASDatabase : MonoBehaviour {
             foreach (var downloadDatabaseRowsItem in downloadDatabaseRecords.downloadDatabaseRows)
             {
                 LoadData(downloadDatabaseRecords.appID, downloadDatabaseRowsItem.sheetName, downloadDatabaseRowsItem.col, downloadDatabaseRowsItem.row, downloadDatabaseRowsItem.fieldsNames);
-
             }
 
         }
@@ -56,7 +56,7 @@ public class GASDatabase : MonoBehaviour {
             {
                 for (int i = 0; i < DataTxt.Count; i++)
                 {
-                    SaveData(DataTxt[i], downloadDatabaseRecords.downloadDatabaseRows[i].sheetName);
+                    SaveData(DataTxt[i], FileNameTxt[i]);
                 }
             }
         }
@@ -196,6 +196,7 @@ public class GASDatabase : MonoBehaviour {
             {
                 print(www.downloadHandler.text);
                 DataTxt.Add(www.downloadHandler.text);
+                FileNameTxt.Add(sheetName);
             }
         }       
     }
