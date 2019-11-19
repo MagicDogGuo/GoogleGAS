@@ -1,11 +1,16 @@
 ﻿using LitJson;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class GASDatabaseTest : MonoBehaviour {
+public class GASDatabase : MonoBehaviour {
+
+    public DownloadDatabaseRecord downloadDatabaseRecords;
+
 
     List<string> DataTxt = new List<string>();
     int row =-1;
@@ -30,7 +35,15 @@ public class GASDatabaseTest : MonoBehaviour {
 
         if (GUI.Button(new Rect(900, 50 , 100, 30),"更新"))
         {
-            LoadData();
+            //DownloadDatabaseRow downloadDatabaseRow00 = downloadDatabaseRecords.downloadDatabaseRows[0];
+            //DownloadDatabaseRow downloadDatabaseRow01 = downloadDatabaseRecords.downloadDatabaseRows[1];
+
+            foreach (var downloadDatabaseRowsItem in downloadDatabaseRecords.downloadDatabaseRows)
+            {
+                LoadData(downloadDatabaseRecords.appID, downloadDatabaseRowsItem.sheetName, downloadDatabaseRowsItem.col, downloadDatabaseRowsItem.row, downloadDatabaseRowsItem.fieldsNames);
+
+            }
+
         }
 
         if (GUI.Button(new Rect(900, 300, 100, 30), "存"))
@@ -43,7 +56,7 @@ public class GASDatabaseTest : MonoBehaviour {
             {
                 for (int i = 0; i < DataTxt.Count; i++)
                 {
-                    SaveData(DataTxt[i],"資料名字");
+                    SaveData(DataTxt[i], downloadDatabaseRecords.downloadDatabaseRows[i].sheetName);
                 }
             }
         }
@@ -52,7 +65,6 @@ public class GASDatabaseTest : MonoBehaviour {
         {
             Application.Quit();
         }
-
     }
 
     void SaveData(string InputString,string FileName)
@@ -65,15 +77,53 @@ public class GASDatabaseTest : MonoBehaviour {
         //把JsonData轉成JsonWriter
         JsonMapper.ToJson(m_jsondata, jsonWriter);
 
-        File.WriteAllText(Application.dataPath + "/Resources/" + FileName+ ".json", jsonWriter.ToString());
+        File.WriteAllText(Application.dataPath + "/Resources/" + FileName+ ".json", String_ChineseConvert(jsonWriter.ToString()));
         Debug.Log("已儲存");
     }
 
-    string[] FieldArrray = { "Level", "IsPass", "Score" };
-    void LoadData()
+
+    /// <summary>
+    /// 可以将中文的unicode转成能识别的GBK编码
+    /// </summary>
+    /// <param name="ToJsondata">要轉化的字串</param>
+    /// <returns></returns>
+    string String_ChineseConvert(string ToJsondata)
     {
-        //A2
-        StartCoroutine(Upload("1NyDlpVforvBe9DeS9c928JYqqlYsftuhdDXGJqrX2wo", "LevelPass", "readGroupToJson_3field", 2,1, FieldArrray[0], FieldArrray[1], FieldArrray[2]));    
+        string jsonStr = ToJsondata;
+
+        Regex reg = new Regex(@"(?i)\\[uU]([0-9a-f]{4})");
+        string ss = reg.Replace(jsonStr, delegate (Match m) { return ((char)Convert.ToInt32(m.Groups[1].Value, 16)).ToString(); });
+
+        return ss;
+    }
+
+
+
+    enum readGroupToJsonKinds
+    {
+        readGroupToJson_3field,
+        readGroupToJson_4field,
+        readGroupToJson_7field
+    }
+
+    void LoadData(string appID, string sheetName, int row, int col, FieldsName[] fields)
+    {
+        Debug.Log(fields.Length);
+        switch (fields.Length)
+        {
+            case 3:
+                //A2
+                StartCoroutine(Upload(appID, sheetName, row, col, readGroupToJsonKinds.readGroupToJson_3field.ToString(), fields[0].fields, fields[1].fields, fields[2].fields));
+                break;
+            case 4:
+                StartCoroutine(Upload(appID, sheetName, row, col, readGroupToJsonKinds.readGroupToJson_4field.ToString(), fields[0].fields, fields[1].fields, fields[2].fields, fields[3].fields));
+                break;
+            case 7:
+                StartCoroutine(Upload(appID, sheetName, row, col, readGroupToJsonKinds.readGroupToJson_7field.ToString(), fields[0].fields, fields[1].fields, fields[2].fields, fields[3].fields, fields[4].fields, fields[5].fields, fields[6].fields));
+                break;
+            default:
+                break;
+        }
     }
 
     IEnumerator Upload(string mathod,int row1 = 0,int row2 = 0)
@@ -117,16 +167,16 @@ public class GASDatabaseTest : MonoBehaviour {
         }
     }
 
-    IEnumerator Upload(string appID,string sheetName, string mathod, int row, int col,params string[] fields)
+    IEnumerator Upload(string appID,string sheetName, int row, int col, string mathod, params string[] fields)
     {
         WWWForm form = new WWWForm();
         form.AddField("appID", appID);
         form.AddField("sheetName", sheetName);
 
-        form.AddField("method", mathod);
-
         form.AddField("row", row);
         form.AddField("col", col);
+
+        form.AddField("method", mathod);
 
         for (int i = 0; i < fields.Length; i++)
         {
@@ -150,6 +200,7 @@ public class GASDatabaseTest : MonoBehaviour {
         }       
     }
 }
+
 
 public class ArrayDataRow {
     public string ID;

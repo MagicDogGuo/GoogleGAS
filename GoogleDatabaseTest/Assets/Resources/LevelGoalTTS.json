@@ -1,0 +1,15 @@
+
+[
+     {
+          "ID" : 1,
+          "String_ID" : "ResultSound_01",
+          "Description" : "成功音效",
+          "Audio_name"  : "Level_Success"
+     },
+     {
+          "ID" : 2,
+          "String_ID" : "ResultSound_02",
+          "Description" : "失敗音效",
+          "Audio_name"  : "Level_Fail"
+     }
+]

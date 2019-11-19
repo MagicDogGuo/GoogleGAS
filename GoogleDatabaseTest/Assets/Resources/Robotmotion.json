@@ -1,0 +1,253 @@
+
+[
+     {
+          "ID" : 1,
+          "String_ID" : "Robot_Walk_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 2,
+          "String_ID" : "Robot_Walk_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 3,
+          "String_ID" : "Robot_Dig_Succ",
+          "Motion"    : "666_WO_Dig"
+     },
+     {
+          "ID" : 4,
+          "String_ID" : "Robt_DIg_Fail",
+          "Motion"    : "666_WO_DigHard"
+     },
+     {
+          "ID" : 5,
+          "String_ID" : "Robot_TakeObi_Succ",
+          "Motion"    : "666_WO_Handling"
+     },
+     {
+          "ID" : 6,
+          "String_ID" : "Robot_TakeObj_Fail",
+          "Motion"    : "666_WO_Handling"
+     },
+     {
+          "ID" : 7,
+          "String_ID" : "Robot_Umrbella_Succ",
+          "Motion"    : "666_BA_ArmSCircle"
+     },
+     {
+          "ID" : 8,
+          "String_ID" : "Robot_Umrbella_Fail",
+          "Motion"    : "666_EM_Sad04"
+     },
+     {
+          "ID" : 9,
+          "String_ID" : "Robot_Feed_Succ",
+          "Motion"    : "666_DA_PickUp"
+     },
+     {
+          "ID" : 10,
+          "String_ID" : "Robot_Feed_Fail",
+          "Motion"    : "666_DA_Full"
+     },
+     {
+          "ID" : 11,
+          "String_ID" : "Robot_WalkBack_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 12,
+          "String_ID" : "Robot_WalkBack_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 13,
+          "String_ID" : "Robot_WalkFront_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 14,
+          "String_ID" : "Robot_WalkFront_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 15,
+          "String_ID" : "Robot_WalkL_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 16,
+          "String_ID" : "Robot_WalkL_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 17,
+          "String_ID" : "Robot_WalkR_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 18,
+          "String_ID" : "Robot_WalkR_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 19,
+          "String_ID" : "Robot_WalkEast0_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 20,
+          "String_ID" : "Robot_WalkEast0_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 21,
+          "String_ID" : "Robot_WalkWest0_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 22,
+          "String_ID" : "Robot_WalkWest0_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 23,
+          "String_ID" : "Robot_WalkSouth0_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 24,
+          "String_ID" : "Robot_WalkSouth0_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 25,
+          "String_ID" : "Robot_WalkNorth0_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 26,
+          "String_ID" : "Robot_WalkNorth0_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 27,
+          "String_ID" : "Robot_WalkEast90_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 28,
+          "String_ID" : "Robot_WalkEast90_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 29,
+          "String_ID" : "Robot_WalkWest90_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 30,
+          "String_ID" : "Robot_WalkWest90_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 31,
+          "String_ID" : "Robot_WalkSouth90_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 32,
+          "String_ID" : "Robot_WalkSouth90_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 33,
+          "String_ID" : "Robot_WalkNorth90_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 34,
+          "String_ID" : "Robot_WalkNorth90_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 35,
+          "String_ID" : "Robot_WalkEast180_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 36,
+          "String_ID" : "Robot_WalkEast180_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 37,
+          "String_ID" : "Robot_WalkWest180_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 38,
+          "String_ID" : "Robot_WalkWest180_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 39,
+          "String_ID" : "Robot_WalkSouth180_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 40,
+          "String_ID" : "Robot_WalkSouth180_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 41,
+          "String_ID" : "Robot_WalkNorth180_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 42,
+          "String_ID" : "Robot_WalkNorth180_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 43,
+          "String_ID" : "Robot_WalkEast270_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 44,
+          "String_ID" : "Robot_WalkEast270_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 45,
+          "String_ID" : "Robot_WalkWest270_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 46,
+          "String_ID" : "Robot_WalkWest270_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 47,
+          "String_ID" : "Robot_WalkSouth270_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 48,
+          "String_ID" : "Robot_WalkSouth270_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "ID" : 49,
+          "String_ID" : "Robot_WalkNorth270_Succ",
+          "Motion"    : "666_SP_SpotRunning"
+     },
+     {
+          "ID" : 50,
+          "String_ID" : "Robot_WalkNorth270_Fail",
+          "Motion"    : "666_BA_MoveF3cmSlow"
+     }
+]

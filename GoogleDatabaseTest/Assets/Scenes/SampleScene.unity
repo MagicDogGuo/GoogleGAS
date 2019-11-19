@@ -268,3 +268,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6885d0038a499544e8c44d06fcd7f99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  downloadDatabaseRecords: {fileID: 11400000, guid: 36391b2f2175c7648beed683b3ef5a28,
+    type: 2}

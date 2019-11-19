@@ -1,0 +1,156 @@
+
+[
+     {
+          "ID" : 1,
+          "String_ID" : "GameWarning_01",
+          "Description" : "沒放方塊就按開始提醒",
+          "CN"          : "要先拖曳方块到框框里再按下开始按键，我才会知道要做什么哦！",
+          "TW"          : "要先拖曳方塊到框框裡再按下開始按鍵，我才會知道要做什麼哦！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 2,
+          "String_ID" : "GameGoalContent_01",
+          "Description" : "挖土方塊",
+          "CN"          : "挖土！",
+          "TW"          : "挖土！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 3,
+          "String_ID" : "GameGoalContent_02",
+          "Description" : "拿取方塊",
+          "CN"          : "把东西拿起来！",
+          "TW"          : "把東西拿起來！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 4,
+          "String_ID" : "GameGoalContent_03",
+          "Description" : "前進方塊（右）",
+          "CN"          : "向前走吧！",
+          "TW"          : "向前走吧！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 5,
+          "String_ID" : "GameGoalContent_04",
+          "Description" : "撐傘方塊",
+          "CN"          : "撑伞別淋雨！",
+          "TW"          : "撐傘別淋雨！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 6,
+          "String_ID" : "GameGoalContent_05",
+          "Description" : "向後走方塊（左）",
+          "CN"          : "向我的后面走！",
+          "TW"          : "向我的後面走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 7,
+          "String_ID" : "GameGoalContent_06",
+          "Description" : "向右走方塊（下）",
+          "CN"          : "向我的右边走！",
+          "TW"          : "向我的右邊走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 8,
+          "String_ID" : "GameGoalContent_07",
+          "Description" : "向左走方塊（上）",
+          "CN"          : "向我的左边走！",
+          "TW"          : "向我的左邊走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 9,
+          "String_ID" : "GameGoalContent_08",
+          "Description" : "向東走方塊",
+          "CN"          : "向东走！",
+          "TW"          : "向東走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 10,
+          "String_ID" : "GameGoalContent_09",
+          "Description" : "向西走方塊",
+          "CN"          : "向西走！",
+          "TW"          : "向西走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 11,
+          "String_ID" : "GameGoalContent_10",
+          "Description" : "向南走方塊",
+          "CN"          : "向南走！",
+          "TW"          : "向南走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 12,
+          "String_ID" : "GameGoalContent_11",
+          "Description" : "向北走方塊",
+          "CN"          : "向北走！",
+          "TW"          : "向北走！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 13,
+          "String_ID" : "GameGoalContent_12",
+          "Description" : "餵食方塊",
+          "CN"          : "捡起食物，餵饱狗狗！",
+          "TW"          : "撿起食物，餵飽狗狗！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 14,
+          "String_ID" : "GameGoalContent_13",
+          "Description" : "撿電池",
+          "CN"          : "把电池捡起来！",
+          "TW"          : "把電池撿起來！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 15,
+          "String_ID" : "GameGoalContent_14",
+          "Description" : "撿玩具",
+          "CN"          : "捡起骨头玩具！",
+          "TW"          : "撿起骨頭玩具！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 16,
+          "String_ID" : "GameGoalContent_15",
+          "Description" : "找狗",
+          "CN"          : "去找狗狗吧！",
+          "TW"          : "去找狗狗吧！",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     },
+     {
+          "ID" : 17,
+          "String_ID" : "GameGoal_Title",
+          "Description" : "關卡目標介面標題",
+          "CN"          : "任务目标",
+          "TW"          : "任務目標",
+          "EN"          : "/n",
+          "JP"          : "/n"
+     }
+]

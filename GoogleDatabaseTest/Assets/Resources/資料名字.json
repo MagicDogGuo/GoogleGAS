@@ -2,162 +2,252 @@
 [
      {
           "Level" : 1,
-          "IsPass" : true,
-          "Score"  : -1
+          "IsPass" : "Robot_Walk_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 2,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_Walk_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 3,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_Dig_Succ",
+          "Score"  : "666_WO_Dig"
      },
      {
           "Level" : 4,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robt_DIg_Fail",
+          "Score"  : "666_WO_DigHard"
      },
      {
           "Level" : 5,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_TakeObi_Succ",
+          "Score"  : "666_WO_Handling"
      },
      {
           "Level" : 6,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_TakeObj_Fail",
+          "Score"  : "666_WO_Handling"
      },
      {
           "Level" : 7,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_Umrbella_Succ",
+          "Score"  : "666_BA_ArmSCircle"
      },
      {
           "Level" : 8,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_Umrbella_Fail",
+          "Score"  : "666_EM_Sad04"
      },
      {
           "Level" : 9,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_Feed_Succ",
+          "Score"  : "666_DA_PickUp"
      },
      {
           "Level" : 10,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_Feed_Fail",
+          "Score"  : "666_DA_Full"
      },
      {
           "Level" : 11,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkBack_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 12,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkBack_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 13,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkFront_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 14,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkFront_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 15,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkL_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 16,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkL_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 17,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkR_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 18,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkR_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 19,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkEast0_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 20,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkEast0_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 21,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkWest0_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 22,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkWest0_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 23,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkSouth0_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 24,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkSouth0_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 25,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkNorth0_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 26,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkNorth0_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 27,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkEast90_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 28,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkEast90_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 29,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkWest90_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 30,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkWest90_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      },
      {
           "Level" : 31,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkSouth90_Succ",
+          "Score"  : "666_SP_SpotRunning"
      },
      {
           "Level" : 32,
-          "IsPass" : false,
-          "Score"  : -1
+          "IsPass" : "Robot_WalkSouth90_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 33,
+          "IsPass" : "Robot_WalkNorth90_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 34,
+          "IsPass" : "Robot_WalkNorth90_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 35,
+          "IsPass" : "Robot_WalkEast180_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 36,
+          "IsPass" : "Robot_WalkEast180_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 37,
+          "IsPass" : "Robot_WalkWest180_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 38,
+          "IsPass" : "Robot_WalkWest180_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 39,
+          "IsPass" : "Robot_WalkSouth180_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 40,
+          "IsPass" : "Robot_WalkSouth180_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 41,
+          "IsPass" : "Robot_WalkNorth180_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 42,
+          "IsPass" : "Robot_WalkNorth180_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 43,
+          "IsPass" : "Robot_WalkEast270_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 44,
+          "IsPass" : "Robot_WalkEast270_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 45,
+          "IsPass" : "Robot_WalkWest270_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 46,
+          "IsPass" : "Robot_WalkWest270_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 47,
+          "IsPass" : "Robot_WalkSouth270_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 48,
+          "IsPass" : "Robot_WalkSouth270_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
+     },
+     {
+          "Level" : 49,
+          "IsPass" : "Robot_WalkNorth270_Succ",
+          "Score"  : "666_SP_SpotRunning"
+     },
+     {
+          "Level" : 50,
+          "IsPass" : "Robot_WalkNorth270_Fail",
+          "Score"  : "666_BA_MoveF3cmSlow"
      }
 ]

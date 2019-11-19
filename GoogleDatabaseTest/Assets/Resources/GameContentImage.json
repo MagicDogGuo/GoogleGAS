@@ -1,0 +1,117 @@
+
+[
+     {
+          "ID" : 1,
+          "String_ID" : "MainMenu_01",
+          "Description" : "標題字",
+          "Img_name"    : "MainMenu_GameTitle"
+     },
+     {
+          "ID" : 2,
+          "String_ID" : "MainMenu_02",
+          "Description" : "開始遊戲按鍵",
+          "Img_name"    : "MainMenu_GameStart"
+     },
+     {
+          "ID" : 3,
+          "String_ID" : "MainMenu_03",
+          "Description" : "離開遊戲按鍵",
+          "Img_name"    : "MainMenu_Quit"
+     },
+     {
+          "ID" : 4,
+          "String_ID" : "Pause_01",
+          "Description" : "暫停介面",
+          "Img_name"    : "Pause_PopUp"
+     },
+     {
+          "ID" : 5,
+          "String_ID" : "Pause_02",
+          "Description" : "回到關卡選擇按鍵",
+          "Img_name"    : "Pause_LevelSelect"
+     },
+     {
+          "ID" : 6,
+          "String_ID" : "Pause_03",
+          "Description" : "回到遊戲按鍵",
+          "Img_name"    : "Pause_BackToGame"
+     },
+     {
+          "ID" : 7,
+          "String_ID" : "Pause_04",
+          "Description" : "教學按鍵",
+          "Img_name"    : "Pause_Tutorial"
+     },
+     {
+          "ID" : 8,
+          "String_ID" : "Pause_05",
+          "Description" : "關卡目標按鍵",
+          "Img_name"    : "Pause_Goal"
+     },
+     {
+          "ID" : 9,
+          "String_ID" : "GameOver_01",
+          "Description" : "遊戲過關介面",
+          "Img_name"    : "GameOver_Succ"
+     },
+     {
+          "ID" : 10,
+          "String_ID" : "GameOver_02",
+          "Description" : "遊戲失敗介面",
+          "Img_name"    : "GameOver_Fail"
+     },
+     {
+          "ID" : 11,
+          "String_ID" : "GameOver_03",
+          "Description" : "回到關卡選單按鈕",
+          "Img_name"    : "GameOver_LevelSelect"
+     },
+     {
+          "ID" : 12,
+          "String_ID" : "GameOver_04",
+          "Description" : "再玩一次按鍵",
+          "Img_name"    : "GameOver_PlayAgain"
+     },
+     {
+          "ID" : 13,
+          "String_ID" : "GameOver_05",
+          "Description" : "繼續下一關按鍵",
+          "Img_name"    : "GameOver_NextLevel"
+     },
+     {
+          "ID" : 14,
+          "String_ID" : "GameWarning_01",
+          "Description" : "未放方塊遊戲提醒按鍵",
+          "Img_name"    : "GameWarning_01_OK"
+     },
+     {
+          "ID" : 15,
+          "String_ID" : "GameOver_06",
+          "Description" : "遊戲過關不需取得任何物件",
+          "Img_name"    : "GameOver_Succ02"
+     },
+     {
+          "ID" : 16,
+          "String_ID" : "GameLoading",
+          "Description" : "讀取圖",
+          "Img_name"    : "GameLoading_OnePic"
+     },
+     {
+          "ID" : 17,
+          "String_ID" : "MainMenu_04",
+          "Description" : "教育說明頁",
+          "Img_name"    : "MainMenu_Description_Content"
+     },
+     {
+          "ID" : 18,
+          "String_ID" : "MainMenu_05",
+          "Description" : "防摔留空間預警",
+          "Img_name"    : "MainMenu_FallWarning"
+     },
+     {
+          "ID" : 19,
+          "String_ID" : "Menu_01",
+          "Description" : "關卡選擇_comingsoon",
+          "Img_name"    : "Menu_CommingSoon"
+     }
+]
