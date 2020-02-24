@@ -11,18 +11,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc712b67613fa67499141b4fe0d05907, type: 3}
   m_Name: DownloadDatabaseRecord
   m_EditorClassIdentifier: 
+  appID: 1NyDlpVforvBe9DeS9c928JYqqlYsftuhdDXGJqrX2wo
   downloadDatabaseRows:
-  - sheetName: LevelPass
-    col: 2
-    row: 1
-    fields:
-    - ss
-    - ddd
-    - d
   - sheetName: Robotmotion
     col: 2
     row: 1
-    fields:
-    - qqq
-    - www
-    - eeee
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Motion
+  - sheetName: HandtoHandTutorialTTS
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Description
+    - fields: CN
+    - fields: TW
+    - fields: EN
+    - fields: JP
+  - sheetName: LevelGoalTTS
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Description
+    - fields: CN
+    - fields: TW
+    - fields: EN
+    - fields: JP
+  - sheetName: GameContentText
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Description
+    - fields: CN
+    - fields: TW
+    - fields: EN
+    - fields: JP
+  - sheetName: GameContentTTS
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Description
+    - fields: CN
+    - fields: TW
+    - fields: EN
+    - fields: JP
+  - sheetName: GameContentImage
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Description
+    - fields: Img_name
+  - sheetName: GameContentAudio
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: ID
+    - fields: String_ID
+    - fields: Description
+    - fields: Audio_name
+  - sheetName: LevelPass
+    col: 2
+    row: 1
+    fieldsNames:
+    - fields: Level
+    - fields: IsPass
+    - fields: Score
