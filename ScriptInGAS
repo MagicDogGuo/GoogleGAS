@@ -1,0 +1,64 @@
+//for Testing
+function myFunction() {
+  var app = SpreadsheetApp.openById("1QGLH0GBIAmEOy71yhQJPXchfknaXlJSeVzc2e6sfjwY");
+  var sheet=app.getSheets()[0];
+  sheet.getRange(2, 2).setValue("Hello8");
+}
+
+
+function doPost(e){
+  var parameter = e.parameter;
+  var app = SpreadsheetApp.openById(parameter.appID);
+  var sheet = app.getSheetByName(parameter.sheetName);
+  var lastRow=sheet.getLastRow();//橫
+  var lastCol=sheet.getLastColumn();//直  
+    
+  if(parameter.method == "getGridNum"){
+     return ContentService.createTextOutput("橫列,"+lastRow+",直行,"+lastCol);
+  }   
+  if(parameter.method == "read"){
+    return ContentService.createTextOutput(sheet.getRange(parameter.row, parameter.col).getValue());  
+  }
+  if(parameter.method == "readGroupToJson_3field"){   
+    return getData_3field(sheet,parameter.row, parameter.col,parameter.field01,parameter.field02,parameter.field03);
+  }
+  if(parameter.method == "write"){
+    var data=[parameter.name,parameter.hp,parameter.level];
+    sheet.appendRow(data);
+    return ContentService.createTextOutput("OK");
+  }
+}
+
+function doGet(e) {
+  var ss = SpreadsheetApp.openById("1QGLH0GBIAmEOy71yhQJPXchfknaXlJSeVzc2e6sfjwY");
+  var sheet = ss.getSheets()[0];
+  return getData_3field(sheet,1,1,"aa","bb","cc");
+}
+
+
+function getData_3field(sheet,row,col,field01,field02,field03){
+  var jo = {};
+  var dataArray = [];
+  var rows = sheet.getRange(row,col, sheet.getLastRow(), sheet.getLastColumn()).getValues();
+
+  
+  Logger.log(rows);
+  
+  for(var i = 0, l = rows.length; i<l; i++){
+    var dataRow = rows[i];
+    var record = {};
+        
+    if(dataRow[0]!='' && dataRow[2]!=''){
+      record[field01] = dataRow[0];
+      record[field02] = dataRow[1];
+      record[field03] = dataRow[2];
+
+      dataArray.push(record);    
+    }   
+  }
+  
+  jo = dataArray;
+  
+  var result = JSON.stringify(jo);
+  return ContentService.createTextOutput(result).setMimeType(ContentService.MimeType.JSON);
+}
