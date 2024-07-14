@@ -1,4 +1,4 @@
-1. Deploy the script [scriptInGAS](../ScriptInGAS) to "https://www.google.com/script/start/"
+1. Deploy the script [scriptInGAS](ScriptInGAS) to "https://www.google.com/script/start/"
 2. Open the project in Unity
 
 Demo Video:
